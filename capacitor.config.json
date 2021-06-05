@@ -1,0 +1,6 @@
+{
+  "appId": "com.medico.app",
+  "appName": "medico",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
