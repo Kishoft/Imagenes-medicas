@@ -1,6 +1,6 @@
 <template>
 	<div id="imageBoxContainer">
-		<img v-for="file in filesUploaded" :key="file.id" :src="file.dataURL" :style="{ opacity : file.config.opacity / 100}">
+		<img v-for="file in filesUploaded" :key="file.id" :src="file.dataURL" :style="{ opacity : file.config.opacity / 100, top : file.config.top * -1 + 'px', left : file.config.left * -1 + 'px' }">
 	</div>
 </template>
 
@@ -25,12 +25,13 @@ export default {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 		margin: auto;
+		background: white;
 	}
 	#imageBoxContainer > img{
 		position: relative;
-		grid-row: 1;
 		grid-column: 1;
+		grid-row: 1;
+		object-fit: contain;
 		width: 100%;
-		height: 100%;
 	}
 </style>

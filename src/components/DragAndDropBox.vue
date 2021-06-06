@@ -7,7 +7,7 @@
         item-key="id"
     >
         <template #item="{ element }">
-            <div class="imageUploadedItem">
+            <div class="imageUploadedItem glass">
                 <i class="handle">
                     <svg id="f1453671-76fd-4d52-8e09-3f9a3cc7a071" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 46">
                         <path d="M22,0,15.6,6.3A1,1,0,0,0,17,7.7l4-3.9V13H0v4H44V13H23V3.8l3.9,3.9a1,1,0,1,0,1.4-1.4L22,0ZM0,21v4H44V21Zm0,8v4H21v9.2l-3.9-3.9a1,1,0,1,0-1.4,1.4L22,46h0l6.4-6.3A1,1,0,0,0,27,38.3l-4,3.9V33H44V29Z"/>
@@ -15,7 +15,11 @@
 
                 </i>
                 <span>{{ element.name }} </span>
-                <input type="range" min="0" max="100" @change="changeOpacity" v-model="element.config.opacity"/>
+                <input type="range" min="0" max="100" v-model="element.config.opacity"/>
+                <div class="position">
+                    <input type="number" placeholder="Izquierda o Derecha" v-model="element.config.left">
+                    <input type="number" placeholder="Arriba o Abajo" v-model="element.config.top">
+                </div>
                 <i class="close" @click="remove(element.id)">
                     <svg id="abf82c46-cc2c-4748-92e3-4f0ede5a0ffd" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 303">
                         <path d="M151.5,100.1,251.6,0,303,51.3,202.9,151.5l-51.4-51.4Z"/>
@@ -24,7 +28,6 @@
                         <path d="M0,51.4,51.4,0,151.6,100.1l-51.3,51.4Z"/>
                         <path d="M151.5,202.9l-51.4-51.4,51.4-51.4,51.4,51.4-51.4,51.4Z"/>
                     </svg>
-
                 </i>
             </div>
         </template>
@@ -62,11 +65,15 @@ export default {
         display:flex;
         justify-content: space-between;
         align-items: center;
-        width: clamp(200px, 80%, 500px);
+        width: clamp(200px, 80%, 600px);
         padding: 5px 10px;
         margin: 10px auto;
         border-radius: 5px;
-        background: #ffffff;
+    }
+    i{
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
     i.handle{
         cursor: grab;
@@ -85,5 +92,10 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 15ch;
+        margin: auto 5px;
+    }
+    .position{
+        display:flex;
+        flex-direction: column;
     }
 </style>

@@ -1,8 +1,12 @@
 <template>
-    <form @submit.prevent="handleImageUpload">
-        <label for="fileInput">Seleccionar imágenes</label>
-        <input type="file" name="image" id="fileInput" ref="fileUploader" multiple>
-        <input type="submit" value="Cargar">
+    <h1>Superposición de imágenes</h1>
+    <form class="glass" @submit.prevent="handleImageUpload">
+        <fieldset>
+            <legend>Importe archivos a la aplicación</legend>
+            <label for="fileInput">Seleccionar imágenes</label>
+            <input type="file" name="image" id="fileInput" ref="fileUploader" multiple>
+            <input type="submit" value="Cargar">
+        </fieldset>
     </form>
 </template>
 
@@ -33,11 +37,15 @@ export default {
         display:none;
     }
     input[type="submit"], label{
+        font-size: clamp(12px, 14px, 16px);
         cursor: pointer;
         padding: 5px 10px;
         border:1px solid lightblue;
         margin: auto 5px;
         border-radius: 5px;
         background: #ffffff;
+    }
+    fieldset{
+        border-radius: 10px;
     }
 </style>

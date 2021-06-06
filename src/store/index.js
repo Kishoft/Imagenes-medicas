@@ -28,7 +28,9 @@ export default createStore({
 					dataURL : dataURL,
 					name : payload.name,
 					config : {
-						opacity : 50
+						opacity : 50,
+						top : 0,
+						left : 0
 					}
 				})
 			})
@@ -41,9 +43,6 @@ export default createStore({
 		saveSort(state, payload){
 			state.filesUploaded = payload
 			console.log(payload)
-		},
-		testing(state, payload){
-			state.test = payload
 		}
 	},
 	actions: {

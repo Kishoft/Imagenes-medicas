@@ -6,9 +6,11 @@
 body{
   margin: 0;
   padding: 0;
-  background: #2980B9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(90deg, rgb(160, 222, 219),rgb(3, 165, 209));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
 }
 #app {
@@ -30,5 +32,9 @@ body{
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.glass{
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
 }
 </style>
