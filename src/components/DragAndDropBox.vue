@@ -12,7 +12,6 @@
                     <svg id="f1453671-76fd-4d52-8e09-3f9a3cc7a071" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 46">
                         <path d="M22,0,15.6,6.3A1,1,0,0,0,17,7.7l4-3.9V13H0v4H44V13H23V3.8l3.9,3.9a1,1,0,1,0,1.4-1.4L22,0ZM0,21v4H44V21Zm0,8v4H21v9.2l-3.9-3.9a1,1,0,1,0-1.4,1.4L22,46h0l6.4-6.3A1,1,0,0,0,27,38.3l-4,3.9V33H44V29Z"/>
                     </svg>
-
                 </i>
                 <span>{{ element.name }} </span>
                 <input type="range" min="0" max="100" v-model="element.config.opacity"/>
