@@ -1,6 +1,11 @@
 <template>
 	<div id="imageBoxContainer">
-		<img v-for="file in filesUploaded" :key="file.id" :src="file.dataURL" :style="{ opacity : file.config.opacity / 100, top : file.config.top * -1 + 'px', left : file.config.left * -1 + 'px' }">
+		<img
+		v-for="file in filesUploaded" 
+		:key="file.id" 
+		:src="file.dataURL" 
+		:style="{ opacity : file.config.opacity / 100, top : file.config.top * -1 + 'px', left : file.config.left * -1 + 'px' }"
+		>
 	</div>
 </template>
 
