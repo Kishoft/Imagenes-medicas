@@ -31,7 +31,6 @@ export default {
 		position: relative;
 		grid-column: 1;
 		grid-row: 1;
-		object-fit: contain;
 		width: 100%;
 	}
 </style>
